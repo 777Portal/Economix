@@ -813,6 +813,11 @@ document.getElementById('createItem').addEventListener('click', createItem);
 document.getElementById('mineItem').addEventListener('click', mineTokens);
 document.getElementById('takeItem').addEventListener('click', takeItem);
 document.getElementById('sendMessage').addEventListener('click', sendGlobalMessage);
+document.getElementById('messageInput').addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      sendGlobalMessage();
+    };
+  });
 document.getElementById('logout').addEventListener('click', () => {
   localStorage.removeItem('token');
 });
